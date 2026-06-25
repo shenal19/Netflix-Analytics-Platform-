@@ -1,16 +1,18 @@
-# ⭐ Netflix Analytics & Recommendation Intelligence Platform
+# 🎬 Netflix Analytics Platform
 
 <div align="center">
 
-**🚀 End-to-End Data Analytics Platform using SQL, Python ETL & Power BI**
+### **End-to-End Data Analytics Platform using SQL, Python ETL & Power BI**
 
-*Transforming streaming data into actionable business insights through advanced SQL analytics, automated ETL pipelines, and interactive dashboards.*
+*A real-world analytics platform that transforms streaming data into actionable business insights using modern data engineering and business intelligence techniques.*
+
+**🚧 Project Status:** Under Development
 
 ![Python](https://img.shields.io/badge/Python-3.x-blue)
 ![SQL](https://img.shields.io/badge/SQL-Advanced-green)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-blue)
-![PowerBI](https://img.shields.io/badge/PowerBI-Dashboard-yellow)
-![License](https://img.shields.io/badge/License-MIT-red)
+![PowerBI](https://img.shields.io/badge/PowerBI-In%20Progress-yellow)
+![Status](https://img.shields.io/badge/Status-Development-orange)
 
 </div>
 
@@ -18,51 +20,49 @@
 
 # 📌 Overview
 
-Netflix Analytics & Recommendation Intelligence Platform is a full-stack data analytics project that simulates a real-world streaming platform. The project integrates **SQL, Python ETL, and Business Intelligence** to analyze user engagement, content performance, subscription revenue, and personalized recommendations.
+Netflix Analytics Platform is an end-to-end data analytics project designed to simulate the data infrastructure of a modern streaming platform.
 
-The platform demonstrates modern data engineering and analytics workflows used in large-scale product companies.
+The project combines **SQL, Python ETL, and Power BI** to build a scalable analytics solution capable of analyzing user engagement, content performance, subscription trends, and recommendation insights.
+
+The primary goal is to demonstrate practical skills in **Database Design, Data Engineering, SQL Analytics, Business Intelligence, and Data Visualization**.
 
 ---
 
 # 🎯 Objectives
 
 * Design a scalable relational database
-* Build automated Python ETL pipelines
+* Build automated ETL pipelines using Python
 * Perform advanced SQL analytics
-* Generate business insights through dashboards
+* Create interactive Power BI dashboards
 * Develop a recommendation engine
-* Optimize query performance using indexing
+* Optimize query performance
 
 ---
 
 # 🏗️ Project Architecture
 
 ```text
-                    Raw Netflix Dataset
-                            │
-                            ▼
-                 Python ETL Pipeline
-         (Extract → Transform → Load)
-                            │
-                            ▼
-                  PostgreSQL / MySQL
-                            │
-        ┌───────────────────┼───────────────────┐
-        ▼                   ▼                   ▼
- Advanced SQL        Recommendation        Query
-   Analytics             Engine          Optimization
-        │                   │                   │
-        └───────────────────┼───────────────────┘
-                            ▼
-                  Power BI Dashboard
-                            │
-                            ▼
-                  Business Insights
+Raw Dataset
+     │
+     ▼
+Python ETL Pipeline
+     │
+     ▼
+PostgreSQL / MySQL
+     │
+     ▼
+Advanced SQL Analytics
+     │
+     ▼
+Power BI Dashboard
+     │
+     ▼
+Business Insights
 ```
 
 ---
 
-# 🛠️ Tech Stack
+# 🛠 Tech Stack
 
 | Category        | Technologies       |
 | --------------- | ------------------ |
@@ -75,254 +75,99 @@ The platform demonstrates modern data engineering and analytics workflows used i
 
 ---
 
-# 📂 Project Structure
+# 📂 Repository Structure
 
 ```text
 Netflix-Analytics-Platform/
 
-│
 ├── dataset/
-│
 ├── sql/
-│   ├── schema.sql
-│   ├── constraints.sql
-│   ├── indexes.sql
-│   ├── views.sql
-│   ├── procedures.sql
-│   └── analytics_queries.sql
-│
 ├── python/
-│   ├── etl.py
-│   ├── transform.py
-│   ├── load.py
-│   └── recommendation.py
-│
 ├── dashboard/
-│   └── Netflix_Dashboard.pbix
-│
 ├── docs/
-│   ├── ER_Diagram.png
-│   ├── StarSchema.png
-│   └── Report.pdf
-│
 ├── screenshots/
-│
 ├── README.md
-│
 └── requirements.txt
 ```
 
 ---
 
-# 🗄️ Database Design
+# 🚧 Development Roadmap
 
-## Dimension Tables
+## ✅ Phase 1 — Planning & Database Design *(Current)*
 
-* Users
-* Movies
-* Genres
-* Dates
-
-## Fact Tables
-
-* Watch History
-* Ratings
-* Subscriptions
+* Repository Setup
+* Database Design
+* ER Diagram
+* Star Schema
+* Project Documentation
 
 ---
 
-# ⭐ Star Schema
+## ⏳ Phase 2
 
-```text
-                 dim_users
-                      │
-                      │
-dim_dates ─── fact_watch_history ─── dim_movies
-                      │
-                      │
-               fact_ratings
-                      │
-               fact_subscriptions
-```
-
----
-
-# 📊 Analytics Modules
-
-### 🎬 Content Analytics
-
-* Top Movies
-* Genre Popularity
-* Watch Time Analysis
-* Completion Rate Analysis
-
----
-
-### 👤 User Analytics
-
-* Active Users
-* User Retention
-* User Engagement
-* Watch Frequency
-
----
-
-### 💰 Revenue Analytics
-
-* Revenue by Plan
-* Revenue by Country
-* Monthly Revenue
-* Premium Subscriber Analysis
-
----
-
-### 📉 Churn Analytics
-
-* Inactive Users
-* Churn Rate
-* Subscription Trends
-
----
-
-### 🤖 Recommendation Analytics
-
-* Trending Movies
-* Genre-Based Recommendations
-* Collaborative Filtering
-* Personalized Suggestions
-
----
-
-# 🔥 SQL Concepts Implemented
-
-* SELECT
-* WHERE
-* ORDER BY
-* GROUP BY
-* HAVING
-* INNER JOIN
-* LEFT JOIN
-* Subqueries
-* Common Table Expressions (CTE)
-* Window Functions
-* Views
-* Stored Procedures
-* Triggers
-* Indexing
-* Query Optimization
-
----
-
-# 🐍 Python ETL Pipeline
-
-The ETL pipeline automates:
-
-### Extract
-
-* Read CSV datasets
-* Load raw streaming data
-
-### Transform
-
-* Remove duplicates
-* Handle missing values
-* Standardize formats
-* Feature engineering
-
-### Load
-
-* Insert cleaned data into PostgreSQL/MySQL
-* Validate records
-* Maintain referential integrity
-
----
-
-# 📈 Power BI Dashboard
-
-### Executive Dashboard
-
-* Total Users
-* Total Revenue
-* Watch Hours
-* Churn Rate
-
-### Content Dashboard
-
-* Top Movies
-* Top Genres
-* Ratings Distribution
-
-### User Dashboard
-
-* User Segmentation
-* Engagement Analysis
-* Country-wise Activity
-
-### Recommendation Dashboard
-
-* Trending Movies
-* Personalized Recommendations
-
----
-
-# ⚡ Performance Optimization
-
-Implemented:
-
+* Database Creation
+* Constraints
 * Primary Keys
 * Foreign Keys
-* Composite Keys
-* Indexes
-* Execution Plan Analysis (`EXPLAIN`)
-* Query Optimization
 
 ---
 
-# 💡 Business Insights
+## ⏳ Phase 3
 
-The platform provides insights into:
-
-* User engagement patterns
-* Content performance
-* Revenue growth
-* Subscriber retention
-* Recommendation effectiveness
-* Genre popularity trends
+* Python ETL Pipeline
 
 ---
 
-# 🚀 Resume Highlights
+## ⏳ Phase 4
 
-* Designed a **Netflix-scale relational data warehouse** with multiple interconnected tables.
-* Built **50+ advanced SQL queries** using joins, CTEs, window functions, views, stored procedures, and indexing.
-* Developed **Python ETL pipelines** for automated data cleaning and loading.
-* Created **Power BI dashboards** for engagement, churn, revenue, and content analytics.
-* Implemented a **recommendation engine** for personalized content suggestions.
+* Advanced SQL Analytics
+
+---
+
+## ⏳ Phase 5
+
+* Power BI Dashboard
+
+---
+
+## ⏳ Phase 6
+
+* Recommendation Engine
 
 ---
 
 # 📚 Skills Demonstrated
 
-* Advanced SQL
 * Database Design
+* SQL
 * Data Engineering
 * ETL Pipelines
 * Business Intelligence
-* Data Visualization
 * Query Optimization
-* Recommendation Systems
-* Analytics Engineering
+* Data Visualization
 
 ---
 
-# 🎯 Future Enhancements
+# 📌 Current Progress
 
-* Apache Airflow for ETL orchestration
-* Docker containerization
-* REST API using FastAPI
-* Real-time streaming analytics
-* Machine Learning recommendation models
-* Cloud deployment on AWS
+* [x] Project Planning
+* [x] Repository Structure
+* [ ] Database Implementation
+* [ ] ETL Pipeline
+* [ ] SQL Analytics
+* [ ] Power BI Dashboard
+* [ ] Recommendation Engine
+
+---
+
+# 🚀 Future Enhancements
+
+* Apache Airflow
+* Docker
+* FastAPI
+* AWS Deployment
+* Real-time Analytics
 
 ---
 
@@ -333,6 +178,3 @@ The platform provides insights into:
 B.Tech Computer Science and Engineering (Data Science)
 
 Vellore Institute of Technology, Chennai
-
----
-
