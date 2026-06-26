@@ -153,9 +153,9 @@ Netflix-Analytics-Platform/
 
 * [x] Project Planning
 * [x] Repository Structure
-* [ ] Database Implementation
-* [ ] ETL Pipeline
-* [ ] SQL Analytics
+* [x] Database Implementation
+* [x] ETL Pipeline
+* [x] SQL Analytics
 * [ ] Power BI Dashboard
 * [ ] Recommendation Engine
 
