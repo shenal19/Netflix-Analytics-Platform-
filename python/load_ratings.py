@@ -1,26 +1,27 @@
 from pathlib import Path
 import pandas as pd
-from sqlalchemy import create_engine
+from sqlalchemy import text
+from db import engine
 
-# Project root
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Read cleaned datasets
-movies = pd.read_csv(BASE_DIR / "dataset" / "processed" / "movies_clean.csv")
-ratings = pd.read_csv(BASE_DIR / "dataset" / "processed" / "ratings_clean.csv")
-
-# PostgreSQL connection
-engine = create_engine(
-    "postgresql://postgres:balaji@localhost:5432/netflix_analytics"
+ratings = pd.read_csv(
+    BASE_DIR / "dataset" / "generated" / "ratings.csv"
 )
 
-print("Connected to PostgreSQL successfully!")
+print("Rows:", len(ratings))
 
-movies.to_sql(
-    "movies",
+with engine.begin() as conn:
+    conn.execute(
+        text("TRUNCATE TABLE ratings RESTART IDENTITY CASCADE")
+    )
+
+ratings.to_sql(
+    "ratings",
     engine,
     if_exists="append",
-    index=False
+    index=False,
+    chunksize=5000
 )
 
-print("Movies Loaded")
+print("Ratings Loaded Successfully")

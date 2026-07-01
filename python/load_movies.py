@@ -76,3 +76,47 @@ movies_db.to_sql(
 
 print("Movies inserted successfully.")
 
+
+genre_lookup = {}
+
+with engine.begin() as conn:
+
+    result = conn.execute(
+        text("SELECT genre_id, genre_name FROM genres")
+    )
+
+    for row in result:
+        genre_lookup[row.genre_name] = row.genre_id
+
+print(genre_lookup)
+
+movie_genre_rows = []
+
+for _, row in movies.iterrows():
+
+    movie_id = int(row["movieId"])
+
+    genres = row["genres"].split("|")
+
+    for genre in genres:
+
+        movie_genre_rows.append({
+            "movie_id": movie_id,
+            "genre_id": genre_lookup[genre]
+        })
+
+print(f"Relationships created: {len(movie_genre_rows)}")
+
+movie_genres_df = pd.DataFrame(movie_genre_rows)
+
+print(movie_genres_df.head())
+
+
+movie_genres_df.to_sql(
+    "movie_genres",
+    engine,
+    if_exists="append",
+    index=False
+)
+
+print("Movie-Genre relationships inserted successfully!")
