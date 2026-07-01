@@ -1,180 +1,391 @@
 # 🎬 Netflix Analytics Platform
 
-<div align="center">
-
-### **End-to-End Data Analytics Platform using SQL, Python ETL & Power BI**
-
-*A real-world analytics platform that transforms streaming data into actionable business insights using modern data engineering and business intelligence techniques.*
-
-**🚧 Project Status:** Under Development
-
-![Python](https://img.shields.io/badge/Python-3.x-blue)
-![SQL](https://img.shields.io/badge/SQL-Advanced-green)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-blue)
-![PowerBI](https://img.shields.io/badge/PowerBI-In%20Progress-yellow)
-![Status](https://img.shields.io/badge/Status-Development-orange)
-
-</div>
+> An end-to-end Data Analytics and Machine Learning project that simulates a Netflix-style streaming platform using PostgreSQL, Python, SQL, Power BI, and Recommendation Systems.
 
 ---
 
-# 📌 Overview
+## 📌 Project Overview
 
-Netflix Analytics Platform is an end-to-end data analytics project designed to simulate the data infrastructure of a modern streaming platform.
+Netflix Analytics Platform is a portfolio project that demonstrates the complete lifecycle of a data analytics solution—from database design and ETL to business intelligence dashboards and machine learning recommendation systems.
 
-The project combines **SQL, Python ETL, and Power BI** to build a scalable analytics solution capable of analyzing user engagement, content performance, subscription trends, and recommendation insights.
-
-The primary goal is to demonstrate practical skills in **Database Design, Data Engineering, SQL Analytics, Business Intelligence, and Data Visualization**.
+The project is built using a normalized PostgreSQL database, Python for data generation and processing, SQL for analytics, Power BI for interactive dashboards, and machine learning techniques for movie recommendations.
 
 ---
 
-# 🎯 Objectives
+# 🚀 Key Features
 
-* Design a scalable relational database
-* Build automated ETL pipelines using Python
-* Perform advanced SQL analytics
-* Create interactive Power BI dashboards
-* Develop a recommendation engine
-* Optimize query performance
+### 📊 Data Engineering
+
+- Designed a normalized PostgreSQL database
+- Created relational tables with foreign keys
+- Implemented constraints and indexing
+- Generated realistic synthetic Netflix data
+- Built ETL pipelines using Python and SQLAlchemy
 
 ---
 
-# 🏗️ Project Architecture
+### 🗄 Database Schema
 
-```text
-Raw Dataset
-     │
-     ▼
-Python ETL Pipeline
-     │
-     ▼
-PostgreSQL / MySQL
-     │
-     ▼
-Advanced SQL Analytics
-     │
-     ▼
-Power BI Dashboard
-     │
-     ▼
-Business Insights
-```
+The platform contains the following entities:
+
+- Movies
+- Genres
+- Movie Genres
+- Users
+- Ratings
+- Watch History
+- Subscription Plans
+- Subscriptions
+- Countries
+- Devices
+
+All tables are connected through proper foreign key relationships following database normalization principles.
+
+---
+
+### 🐍 Python Modules
+
+Developed Python scripts for:
+
+- Data generation
+- ETL pipeline
+- Database loading
+- Recommendation systems
+- Database connectivity
+- Analytics automation
+
+---
+
+### 📈 SQL Analytics
+
+Implemented advanced SQL including:
+
+- Joins
+- Common Table Expressions (CTEs)
+- Window Functions
+- Aggregate Functions
+- Ranking Functions
+- Views
+- Stored Procedures
+- Performance Optimization using Indexes
+
+Created analytical views for:
+
+- Executive KPIs
+- Monthly Watch Hours
+- Monthly Signups
+- Genre Popularity
+- Device Usage
+- Country Watch Time
+- User Activity
+- Subscription Summary
+- Movie Ratings
+- User Watch Summary
+
+---
+
+### 📊 Power BI Dashboards
+
+Developed interactive dashboards including:
+
+## Executive Overview
+
+- Total Users
+- Total Movies
+- Average Rating
+- Total Watch Hours
+- Estimated Revenue
+- Active Subscribers
+
+---
+
+## User Analytics
+
+- User Distribution
+- Daily Active Users
+- Monthly Active Users
+- Watch Time Analysis
+- User Demographics
+
+---
+
+## Content Analytics
+
+- Genre Popularity
+- Top Movies
+- Movie Ratings
+- Completion Rate
+- Watch Time Trends
+
+---
+
+## Subscription Analytics
+
+- Active vs Inactive Users
+- Payment Status
+- Auto Renew Analysis
+- Revenue Distribution
+- Subscription Plans
+
+---
+
+## Recommendation Analytics
+
+Visual insights supporting recommendation systems.
+
+---
+
+# 🤖 Machine Learning
+
+Implemented three recommendation systems.
+
+---
+
+## 1️⃣ Popularity Based Recommendation
+
+Recommends movies based on
+
+- Average Rating
+- Rating Count
+
+Libraries Used
+
+- Pandas
+
+---
+
+## 2️⃣ Content Based Recommendation
+
+Uses
+
+- TF-IDF Vectorization
+- Cosine Similarity
+
+Content similarity is calculated using movie genres stored in PostgreSQL.
+
+Libraries
+
+- Scikit-learn
+- Pandas
+
+---
+
+## 3️⃣ Collaborative Filtering
+
+User-user recommendation engine based on
+
+- Ratings Matrix
+- Cosine Similarity
+- Similar User Behaviour
 
 ---
 
 # 🛠 Tech Stack
 
-| Category        | Technologies       |
-| --------------- | ------------------ |
-| Programming     | Python             |
-| Database        | PostgreSQL / MySQL |
-| Analytics       | SQL                |
-| ETL             | Pandas, SQLAlchemy |
-| Dashboard       | Power BI           |
-| Version Control | Git & GitHub       |
+## Programming
+
+- Python
+- SQL
+
+## Database
+
+- PostgreSQL
+- pgAdmin 4
+
+## Python Libraries
+
+- Pandas
+- NumPy
+- SQLAlchemy
+- Psycopg2
+- Faker
+- Scikit-learn
+- Matplotlib
+
+## Business Intelligence
+
+- Microsoft Power BI
 
 ---
 
-# 📂 Repository Structure
+# 📂 Project Structure
 
-```text
+```
 Netflix-Analytics-Platform/
 
 ├── dataset/
-├── sql/
+│   ├── raw/
+│   ├── generated/
+│   └── processed/
+│
 ├── python/
-├── dashboard/
-├── docs/
+│   ├── db.py
+│   ├── load_movies.py
+│   ├── load_users.py
+│   ├── load_watch_history.py
+│   ├── load_ratings.py
+│   ├── popularity_recommender.py
+│   ├── content_based_recommender.py
+│   ├── collaborative_filtering.py
+│
 ├── screenshots/
+│
+├── sql/
+│   ├── schema.sql
+│   ├── analytics_queries.sql
+│   ├── views.sql
+│   ├── procedures.sql
+│   └── indexes.sql
+│
 ├── README.md
-└── requirements.txt
+├── requirements.txt
+└── LICENSE
 ```
 
 ---
 
-# 🚧 Development Roadmap
+# 📸 Dashboard Screenshots
 
-## ✅ Phase 1 — Planning & Database Design *(Current)*
+## Executive Dashboard
 
-* Repository Setup
-* Database Design
-* ER Diagram
-* Star Schema
-* Project Documentation
+<img width="1920" height="1200" alt="Screenshot 2026-06-29 165814" src="https://github.com/user-attachments/assets/0da1edf8-fc1e-402d-99ab-7d666a2f00f3" />
+
+---
+## User Dashboard
+
+<img width="1920" height="1200" alt="Screenshot 2026-06-29 165827" src="https://github.com/user-attachments/assets/adb4ad02-a4ad-4a4d-85ec-727d5a070b0f" />
 
 ---
 
-## ⏳ Phase 2
+## Content Dashboard
 
-* Database Creation
-* Constraints
-* Primary Keys
-* Foreign Keys
+<img width="1920" height="1140" alt="Screenshot 2026-06-29 165840" src="https://github.com/user-attachments/assets/262da4ea-2385-4c03-87e6-f2edd1545e5f" />
+
 
 ---
 
-## ⏳ Phase 3
+## Subscription Dashboard
 
-* Python ETL Pipeline
+<img width="1920" height="1140" alt="Screenshot 2026-06-29 165855" src="https://github.com/user-attachments/assets/977ff4af-6754-469b-ad38-ff7c6096c49e" />
 
----
-
-## ⏳ Phase 4
-
-* Advanced SQL Analytics
 
 ---
 
-## ⏳ Phase 5
+## Recommendation Dashboard
 
-* Power BI Dashboard
+<img width="1920" height="1140" alt="Screenshot 2026-06-29 165913" src="https://github.com/user-attachments/assets/b196638b-6467-4d98-9277-63a7288ac818" />
 
----
-
-## ⏳ Phase 6
-
-* Recommendation Engine
 
 ---
 
-# 📚 Skills Demonstrated
+# ⚙ Installation
 
-* Database Design
-* SQL
-* Data Engineering
-* ETL Pipelines
-* Business Intelligence
-* Query Optimization
-* Data Visualization
+Clone Repository
+
+```bash
+git clone https://github.com/shenal19/Netflix-Analytics-Platform.git
+```
+
+Navigate into the project
+
+```bash
+cd Netflix-Analytics-Platform
+```
+
+Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+Update PostgreSQL credentials in
+
+```python
+python/db.py
+```
+
+Run ETL scripts
+
+```bash
+python load_movies.py
+python load_users.py
+python load_ratings.py
+python load_watch_history.py
+```
+
+Run Recommendation Systems
+
+```bash
+python popularity_recommender.py
+python content_based_recommender.py
+python collaborative_filtering.py
+```
 
 ---
 
-# 📌 Current Progress
+# 📈 Project Highlights
 
-* [x] Project Planning
-* [x] Repository Structure
-* [x] Database Implementation
-* [x] ETL Pipeline
-* [x] SQL Analytics
-* [ ] Power BI Dashboard
-* [ ] Recommendation Engine
+✔ Designed a normalized relational database
+
+✔ Built an automated ETL pipeline
+
+✔ Generated realistic synthetic Netflix data
+
+✔ Developed 5 interactive Power BI dashboards
+
+✔ Wrote advanced SQL queries using joins, CTEs, window functions and views
+
+✔ Implemented three movie recommendation algorithms
+
+✔ Integrated PostgreSQL with Python using SQLAlchemy
+
+✔ Built an end-to-end analytics pipeline from raw data to dashboard visualization
 
 ---
 
-# 🚀 Future Enhancements
+# 📌 Future Enhancements
 
-* Apache Airflow
-* Docker
-* FastAPI
-* AWS Deployment
-* Real-time Analytics
+- Streamlit Web Application
+- Real-time Recommendation API
+- Hybrid Recommendation System
+- Docker Deployment
+- AWS Cloud Deployment
+- Explainable AI for Recommendations
+- User Authentication
+- Live Dashboard Refresh
+
+---
+
+# 📚 Learning Outcomes
+
+This project demonstrates practical experience in
+
+- Database Design
+- SQL Analytics
+- ETL Pipelines
+- Data Engineering
+- Business Intelligence
+- Machine Learning
+- Recommendation Systems
+- Python Programming
+- Data Visualization
 
 ---
 
 # 👨‍💻 Author
 
-**SHENBAGABALAJI A**
+**Balaji**
 
 B.Tech Computer Science and Engineering (Data Science)
 
-Vellore Institute of Technology, Chennai
+VIT Chennai
+
+GitHub:
+https://github.com/shenal19
+
+LinkedIn:
+https://www.linkedin.com/in/shenbaga-balaji-6b4b8228a/
+
+---
+
+## ⭐ If you found this project interesting, consider giving it a Star!
