@@ -6,10 +6,16 @@
 
 ## 📌 Project Overview
 
-Netflix Analytics Platform is a portfolio project that demonstrates the complete lifecycle of a data analytics solution—from database design and ETL to business intelligence dashboards and machine learning recommendation systems.
+This platform combines **Data Engineering, Business Intelligence, Machine Learning, and Web Application Development** into a single interactive solution.
 
-The project is built using a normalized PostgreSQL database, Python for data generation and processing, SQL for analytics, Power BI for interactive dashboards, and machine learning techniques for movie recommendations.
+Users can:
 
+- 📊 Explore interactive analytics dashboards
+- 🗄 Browse the PostgreSQL database
+- 📈 Execute SQL analytics
+- 🤖 Generate AI-powered movie recommendations
+- 📸 View Power BI dashboard screenshots
+- 🔍 Explore Netflix streaming insights through an intuitive Streamlit interface
 ---
 
 # 🚀 Key Features
@@ -205,7 +211,11 @@ User-user recommendation engine based on
 ## Business Intelligence
 
 - Microsoft Power BI
+- Streamlit
 
+## Data Visualization
+
+- Plotly
 ---
 
 # 📂 Project Structure
@@ -278,6 +288,21 @@ Netflix-Analytics-Platform/
 
 ---
 
+## 🌐 Streamlit Web Application
+
+An interactive web application was developed using **Streamlit** to provide a unified interface for exploring the entire project.
+
+### Features
+
+- 🏠 Home Dashboard
+- 📊 Power BI Dashboard Showcase
+- 🗄 PostgreSQL Database Explorer
+- 📈 SQL Analytics Dashboard
+- 🤖 AI Recommendation Engine
+- ℹ Project Overview
+
+The application allows users to interact with the database, execute analytics, and generate movie recommendations directly from the browser.
+
 # ⚙ Installation
 
 Clone Repository
@@ -341,18 +366,18 @@ python collaborative_filtering.py
 
 ✔ Built an end-to-end analytics pipeline from raw data to dashboard visualization
 
+✔ Developed a full-featured Streamlit web application integrating analytics, SQL, PostgreSQL, and AI recommendation systems.
+
 ---
 
 # 📌 Future Enhancements
 
-- Streamlit Web Application
-- Real-time Recommendation API
+- User Authentication
+- Movie Poster Integration (TMDb API)
 - Hybrid Recommendation System
 - Docker Deployment
 - AWS Cloud Deployment
-- Explainable AI for Recommendations
-- User Authentication
-- Live Dashboard Refresh
+- Explainable AI Recommendations
 
 ---
 
@@ -371,6 +396,28 @@ This project demonstrates practical experience in
 - Data Visualization
 
 ---
+
+## 🎥 Live Application
+
+The project includes a Streamlit-based web application that brings together all components into a single interactive interface.
+
+### Available Modules
+
+- 🏠 Home
+- 📊 Dashboard Showcase
+- 🗄 Database Explorer
+- 📈 SQL Analytics
+- 🤖 AI Recommendation Engine
+- ℹ About Project
+
+Run locally using:
+
+```bash
+streamlit run app.py
+```
+
+Deploy link: http://localhost:8501/#netflix-analytics-platform
+
 
 # 👨‍💻 Author
 
